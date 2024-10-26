@@ -1,0 +1,141 @@
+/* common css start */
+:root {
+    --bs-primary: #0B1315;
+    --bs-primary-rgb: 11, 19, 21;
+    --bs-secondary: #C9AB81;
+    --bs-secondary-rgb: 201, 171, 129;
+    --bs-info: #0B1315;
+    --bs-info-rgb: 11, 19, 21;
+    --bs-warning: #0F1D22;
+    --bs-warning-rgb: 15, 29, 34;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* common css end */
+
+/* banner */
+.about-banner {
+    background: url('../images/about-banner-img.jpg');
+    background-size: cover;
+    height: 350px;
+}
+
+.about-right {
+    background: url('../images/bg-reservation2.png');
+    background-size: cover;
+    height: 500px;
+}
+
+.img-round {
+    animation: round 8s linear infinite;
+    margin: auto;
+}
+
+@keyframes round {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* portfolio srt */
+.swiper6 {
+    overflow: hidden;
+}
+
+.swiper6 .pizza {
+    position: relative;
+}
+
+.dark-bg {
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.pizza-hover {
+    position: absolute;
+    top: 5%;
+    left: 0%;
+    color: white;
+    /* transform: translateX(-50%); */
+    background-color: black;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: all 0.4s ease-in-out;
+
+    p {
+        font-size: 70px;
+    }
+
+}
+
+.swiper6 .pizza:hover .pizza-hover {
+    transform: scale(1);
+}
+
+.swiper6 .pizza:hover img {
+    transition: all 0.2s ease-in-out;
+}
+
+.swiper6 .pizza:hover img {
+    transform: scale(1.02);
+}
+
+.swiper6 .pizza:hover .dark-bg {
+    display: block;
+}
+
+/* portfolio end */
+
+
+/* footer  srt */
+.img-logo {
+    width: 100px;
+}
+
+.footer-inner {
+    position: relative;
+    border-bottom: 2px solid var(--bs-secondary);
+}
+
+.footer-inner::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    background-color: var(--bs-secondary);
+    height: 100%;
+    width: 1px;
+}
+
+@media (max-width: 992px) {
+    .footer-inner::before {
+        display: none;
+    }
+
+    .footer-inner {
+        border-bottom: none;
+    }
+}
+
+.form-control::placeholder {
+    color: white;
+}
+
+/* footer  end */
